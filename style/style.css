@@ -1,0 +1,88 @@
+@import url(./auxiliar.css);
+@import url('https://fonts.googleapis.com/css2?family=Cabin:wght@400;500&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Cabin', sans-serif;
+    background-color: rgba(4, 12, 27);
+    color: white;
+}
+
+.bg-slider{
+    width: 100%;
+    height: 100vh;
+    
+    position: absolute;
+    overflow: hidden;
+
+    z-index: -1;
+}
+.bg-slider img{
+    position: absolute;
+}
+.img{
+    position: absolute;
+    width: 100%; 
+}
+.bg-slider::after{
+    content: " ";
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    background: linear-gradient(180deg, #040c1b 7.81%, rgba(4, 12, 27, 0.7) 35.42%, #040c1b 89.06%);
+}
+
+nav{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+   
+    z-index: 5;
+}
+.nav-link{
+    text-transform: uppercase;
+    font-style: italic;
+    letter-spacing: 1px;
+
+    cursor: pointer;
+    transition: .3s ease;
+}
+.nav-link:hover{
+    opacity: .4;
+}
+
+.logo-spider{
+    width: 40px;
+    height: 40px;
+    transition: .5s ease;
+}
+
+.text-spider-hero{
+    font-size:200px;
+    display: inline-block;
+
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    z-index: 1;
+    transform: translate(-50%, -50%);
+}
+.spider-hero{
+    position: absolute;
+    top: 45%;
+    left: 50%;
+
+    z-index: 2;
+    transform: translate(-50%, -50%);
+
+}
+
