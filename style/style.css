@@ -1,35 +1,38 @@
 @import url(./auxiliar.css);
 @import url('https://fonts.googleapis.com/css2?family=Cabin:wght@400;500&display=swap');
 
-*{
+* {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
 }
 
-body{
+body {
     font-family: 'Cabin', sans-serif;
     background-color: rgba(4, 12, 27);
     color: white;
 }
 
-.bg-slider{
+.bg-slider {
     width: 100%;
     height: 100vh;
-    
+
     position: absolute;
     overflow: hidden;
 
     z-index: -1;
 }
-.bg-slider img{
+
+.bg-slider img {
     position: absolute;
 }
-.img{
+
+.img {
     position: absolute;
-    width: 100%; 
+    width: 100%;
 }
-.bg-slider::after{
+
+.bg-slider::after {
     content: " ";
     position: absolute;
     top: 0;
@@ -41,12 +44,13 @@ body{
     background: linear-gradient(180deg, #040c1b 7.81%, rgba(4, 12, 27, 0.7) 35.42%, #040c1b 89.06%);
 }
 
-nav{
+nav {
     display: flex;
     justify-content: space-around;
     align-items: center;
 }
-.nav-link{
+
+.nav-link {
     text-transform: uppercase;
     font-style: italic;
     letter-spacing: 1px;
@@ -54,18 +58,19 @@ nav{
     cursor: pointer;
     transition: .3s ease;
 }
-.nav-link:hover{
+
+.nav-link:hover {
     opacity: .4;
 }
 
-.logo-spider{
+.logo-spider {
     width: 40px;
     height: 40px;
     transition: .5s ease;
 }
 
-.text-spider-hero{
-    font-size:200px;
+.text-spider-hero {
+    font-size: 200px;
     display: inline-block;
 
     text-shadow: 0px 10px 32px rgb(0, 0, 0, 0.40);
@@ -74,10 +79,11 @@ nav{
     position: absolute;
     top: 40%;
     left: 50%;
-    
+
     transform: translate(-50%, -50%);
 }
-.spider-hero{
+
+.spider-hero {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -88,53 +94,127 @@ nav{
 }
 
 
-.cta{
+.cta {
     position: absolute;
     top: 55%;
     left: 25%;
 
     display: flex;
     gap: 8px;
-    
+
     z-index: 999;
 }
 
 .button {
-  cursor: pointer;
-  width: 140px;
-  height: 40px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+    cursor: pointer;
+    width: 140px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
-  gap: 1rem;
-  font-size: 16px;
-  font-weight: 800;
-  letter-spacing: 1px;
-  color: #e4e4e4;
-  background: linear-gradient(189.8deg, #EA1D22 -4%, #640204 104%);
-  border-radius: 4px;
-  border: 0;
-  box-shadow: 0px 8px 24px rgba(0, 0, 0, 0.7);
-  transform: skew(-13deg);
-  transition: all .1s ease;
+    gap: 1rem;
+    font-size: 16px;
+    font-weight: 800;
+    letter-spacing: 1px;
+    color: #e4e4e4;
+    background: linear-gradient(189.8deg, #EA1D22 -4%, #640204 104%);
+    border-radius: 4px;
+    border: 0;
+    box-shadow: 0px 8px 24px rgba(0, 0, 0, 0.7);
+    transform: skew(-13deg);
+    transition: all .1s ease;
 
-  text-decoration: none;
-  text-transform: uppercase;
+    text-decoration: none;
+    text-transform: uppercase;
 }
+
 .button:active {
-  letter-spacing: 0px;
-  transform: skew(-13deg) translateY(8px);
+    letter-spacing: 0px;
+    transform: skew(-13deg) translateY(8px);
 }
 
 
-.cta-play
+.cta-play {
+    width: 120px;
+    height: 120px;
 
-@media(max-width: 768px){
-    .button{
+    border-radius: 50%;
+    background-color: rgb(17, 25, 41, 0.5);
+
+    backdrop-filter: blur(8px);
+    transition: .7s ease;
+
+    position: relative;
+}
+
+.cta-play:hover {
+    backdrop-filter: blur(2px);
+    transform: scale(1.2);
+}
+
+.cta-play::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    width: 32px;
+    height: 32px;
+    background-image: url('../svg/icon-play.svg');
+    background-size: cover;
+
+    transform: translate(-50%, -50%);
+    z-index: -1;
+}
+
+.div-play {
+    position: absolute;
+    top: 50%;
+    right: 30%;
+    z-index: 999;
+}
+
+.div-play h6 {
+    white-space: nowrap;
+    position: absolute;
+    top: 50%;
+    left: 135%;
+
+    transform: translate(-50%, -50%);
+}
+
+
+@media(max-width: 768px) {
+    .button {
         width: 120px;
         height: 30px;
         font-size: 14px;
         font-weight: 400;
     }
+
+    .text-spider-hero {
+        font-size: 60px;
+    }
+
+    .cta {
+    position: absolute;
+    top: 55%;
+    left: 25%;
+
+    display: flex;
+    gap: 8px;
+
+    z-index: 999;
+}
+
+    .cta-play {
+        width: 80px;
+        height: 80px;
+    }
+
+    .div-play h6 {
+    left: 155%;
+
+}
 }
