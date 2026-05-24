@@ -45,9 +45,12 @@ body {
 }
 
 nav {
+    position: sticky;
     display: flex;
     justify-content: space-around;
     align-items: center;
+
+    z-index: 999;
 }
 
 .nav-link {
@@ -57,6 +60,7 @@ nav {
 
     cursor: pointer;
     transition: .3s ease;
+
 }
 
 .nav-link:hover {
@@ -87,6 +91,8 @@ nav {
     position: absolute;
     top: 50%;
     left: 50%;
+    width: 100%;
+    height: 100vh;
 
     z-index: 1;
     transform: translate(-50%, -50%);
@@ -146,6 +152,8 @@ nav {
     transition: .7s ease;
 
     position: relative;
+
+    cursor: pointer;
 }
 
 .cta-play:hover {
@@ -185,7 +193,42 @@ nav {
 }
 
 
+.slider-points{
+    position: absolute;
+    top:60%;
+    right: 4%;
+
+    display: flex;
+    flex-direction: column;
+    gap: 12px
+}
+.point{
+    width: 8px;
+    height: 8px;
+
+
+    border-radius: 50%;
+
+    background-color: rgb(255, 255, 255, .6);
+    z-index: 100;
+
+    cursor: pointer;
+}
+
+.active-point{
+    background-color: rgb(255,255,255, .99);
+    transform: scale(1.5);
+}
+
 @media(max-width: 768px) {
+
+    nav h6{
+        display: none;
+    }
+    .logo-spider{
+        width: 60px;
+        height: 60px;
+    }
     .button {
         width: 120px;
         height: 30px;
@@ -194,27 +237,31 @@ nav {
     }
 
     .text-spider-hero {
-        font-size: 60px;
+        top: 51%;
+        font-size: 80px;
+    }
+
+    .spider-hero {
+        object-fit: cover;
+
     }
 
     .cta {
-    position: absolute;
-    top: 55%;
-    left: 25%;
-
-    display: flex;
-    gap: 8px;
-
-    z-index: 999;
-}
+        top: 70%;
+        left: 10%;
+    }
 
     .cta-play {
         width: 80px;
         height: 80px;
     }
 
-    .div-play h6 {
-    left: 155%;
+    .div-play{
+        top: 57%;
+    }
 
-}
+    .div-play h6 {
+        left: 155%;
+
+    }
 }
