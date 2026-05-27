@@ -68,9 +68,10 @@ nav {
 }
 
 .logo-spider {
-    width: 40px;
-    height: 40px;
+    width: 100%;
+    height: 100%;
     transition: .5s ease;
+
 }
 
 .text-spider-hero {
@@ -213,6 +214,8 @@ nav {
     z-index: 100;
 
     cursor: pointer;
+
+    transition: .2s ease;
 }
 
 .active-point{
@@ -226,8 +229,8 @@ nav {
         display: none;
     }
     .logo-spider{
-        width: 60px;
-        height: 60px;
+        width: 40px;
+        height: 40px;
     }
     .button {
         width: 120px;
@@ -264,4 +267,9 @@ nav {
         left: 155%;
 
     }
+
+    .slider-points{
+        top: 70%;
+    }
+
 }
