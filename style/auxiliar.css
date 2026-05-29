@@ -28,14 +28,26 @@ h6 {
     font-weight: 200;
 }
 
-
+.ml-2{
+    margin-left: 16px;
+}
 
 .text-center {
     text-align: center;
 }
 
+.flex-center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .reltive {
     position: relative;
+}
+
+.hidden{
+    overflow: hidden;
 }
 
 .container {
