@@ -31,46 +31,46 @@ function slideShow(index) {
     point[index].classList.add('active-point');
 }
 
-setInterval(()=>{
+setInterval(() => {
     contSlider++;
-    if(contSlider >= slider.length){
+    if (contSlider >= slider.length) {
         contSlider = 0;
     }
     slideShow(contSlider);
-},3000);
+}, 3000);
 
 
 //animação com gsap
 
-// document.addEventListener('DOMContentLoaded', ()=>{
-//     var tl1 = gsap.timeline();
+document.addEventListener('DOMContentLoaded', () => {
+    var tl1 = gsap.timeline();
 
-//     tl1
-//     .to('.screen-loading',{
-//         duration:2,
-//         opacity:0,
-//         delay:3,
-//         ease: "power4.out",
-//     })
-//     .from('.bg-slider', {
-//         duration: 1,
-//         opacity: 0,
-//         stagger:{each: 0.1},
-//         ease: 'power4.out',  
-//     }, '-=1.0')
-//     .from('nav div',{
-//         duration: 2,
-//         opacity: 0,
-//         y:400,
-//         stagger:{each:0.2},
-//         ease: 'back.out(1.7)',
-//     }, '-=0.5')
-//     .from('.box-hero div',{
-//         duration: 2,
-//         opacity: 0,
-//         y:200,
-//         stagger:{each:0.2},
-//         ease: 'back.out(1.7)',
-//     },'-=1.7')
+    tl1
+        .to('.screen-loading', {
+            duration: 2,
+            opacity: 0,
+            delay: 3,
+            ease: "power4.out",
+        })
+        .fromTo('.bg-slider', {opacity: 0},{
+            duration: 1,
+            opacity: 1,
+            stagger: { each: 0.1 },
+            ease: 'power4.out',
+        }, '-=1.0')
+        .from('nav div', {
+            duration: 1.5,
+            opacity: 0,
+            y: 100,
+            stagger: { each: 0.1 },
+            ease: 'back.out(1.5)',
+        }, '-=0.5')
+        .from('.hero div', {
+            duration: 1.5,
+            opacity: 0,
+            y: 200,
+            stagger: { each: 0.1 },
+            ease: 'back.out(1.5)',
+        }, '-=0.8')
 
-// });
+});
